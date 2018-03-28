@@ -104,3 +104,8 @@ STATE VS PROPS: There are 2 main ways in which react handles data. Through state
               </div>
             )
           }
+
+------------------------------------------------------------------
+EVENTS: This will include BINDING EVENTS, INTERACTING WITH USER INPUTS, AND CHANGING THAT DATA REAL TIME.
+
+  EXERCISE 1: We'll allow the user to change the header 3 dynamically.
