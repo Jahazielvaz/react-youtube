@@ -4,14 +4,17 @@ import "../../App.css"
 export class Header extends React.Component{
   constructor(){
     super();
-    this.state = {name: 'Jahaziel'};
+    this.state = {
+      name: 'Jahaziel',
+    };
   }
 
   render(){
-    this.props.changeAnswer('I really dont know')
     setTimeout(() => {
       this.setState({name: 'Vicious!'})
     }, 3000)
+
+    
     return (
       <header className = "header">
         <h1>My React App!</h1>

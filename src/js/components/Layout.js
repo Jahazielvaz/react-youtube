@@ -3,18 +3,19 @@ import "../../App.css"
 
 import {Header} from "./Header.js";
 import {Footer} from "./Footer.js";
+import {BodyTop} from "./BodyTop.js"
 
 
 export class Layout extends React.Component{
   constructor(){
     super();
     this.state = {
-      answer: []
-    };
+      text: []
+    }
   }
 
-  changeAnswer(answer){
-    this.setState({answer: "I don't know"})
+  changeText(text){
+    this.setState({text})
   }
 
   render(){
@@ -25,7 +26,10 @@ export class Layout extends React.Component{
     <div className="page-container">
       <Header question1= {"Do you want to know who I am?"} story={story} />
       <Header question2={"Do you want to know what I really think?"} story2={story2} />
-      <Header question3={question3} answer={this.changeAnswer.bind(this)} />
+      {/* <Header question3={question3} answer={this.changeAnswer.bind(this)} /> */}
+
+      <BodyTop text={this.changeText.bind(this)}/>
+
       <Footer />
     </div>
     )

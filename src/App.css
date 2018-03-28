@@ -34,3 +34,13 @@ a{
   display: inline-block;
   width: 150px;
 }
+
+.bodytop{
+  text-align: center;
+  margin: 10px 0;
+}
+
+.bodytop input{
+  border: 2px solid lightblue;
+  font-size: 20px;
+}
