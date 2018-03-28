@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.page-container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header{
+  background: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer{
+  background: #222;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin: 20px 0;
+}
+
+.footer li{
+  display: inline-block;
+  width: 150px;
+}

@@ -1,0 +1,106 @@
+WHAT MAKES REACT SO AWESOME!: React makes our apps lightning fast, because it's got a virtual dom.
+React also manages the dom manipulation for us.
+
+CURLY BRACES JSX: Remember that anything in curly braces, will render al normal js
+
+-------------------------------------------------------------------
+CONSTRUCTOR COMPONENT: Remember that whenever you add a constructor to a component, you must always start with the super method.
+  EXAMPLE:
+    class Layout extends React.Component {
+    constructor(){
+    super();
+    this.name = 'Will'
+    }
+
+    render(){
+      return
+        <h1>It's {this.name}</h11>
+    }
+    }
+
+------------------
+  COMPOSING MULTIPLE COMPONENTS (BUILD AN ENTIRE LAYOUT): Use the import and export features. You can create multiple separate components, and export them out to a master component. You can import them all in the master component and place them where ever your want them to go. This way you call those same components multiple times if you wanted, and it'll render them out multiple times.
+
+  CREATING AN ARRAY OF COMPONENTS: Going with the above explanation check out the example. Each one can get passed in their own specific information
+
+    EXAMPLE:
+      render(){
+        var list = [
+          <Component1 />
+          <Component2 />
+          <Component3 />
+        ];
+
+        return(
+          <div>
+            {list}
+          </div>
+        )
+
+-------------------------------------------------------------------
+STATE VS PROPS: There are 2 main ways in which react handles data. Through state, or through props. There is a 3rd way called context, but it's a bit more of an advanced feature, and it's fairly new to react which means it might not be well supported by browsers.
+
+------------------
+  STATE: State is a available through this.state and it's null by default, and then you can set it. Create a constructor. The only place you want to set the state is in the constructor.
+  State works through key value pairs, and you access it through dot notation
+    EXAMPLE:
+
+      constructor(){
+        super();
+        this.state = {name: "Jay"}
+      }
+
+      render(){
+        return(
+          <div>
+            {this.state.name}
+          </div>
+        )
+      }
+------------------
+    CHANGING STATE: this.setState({}) is the command for changing your state, dynamically. I suppose you can use events or other ways to specify when you want the change to be triggered, but for now we're going to use the setTimeout() method, to change it in this example.
+      EXAMPLE:
+        constructor(){
+          super();
+          this.state = {name: "Jay"}
+        }
+
+        render(){
+          setTimeout(() =>{
+            this.setState({name: "Vicious"})
+          }, 1000)
+          return(
+            <div>
+              {this.state.name}
+            </div>
+          )
+        }
+
+------------------
+    THE MENTALITY BEHIND STATE: State only gets used, if a component has an internal value that only affects that component, and doesn't affect the rest of the app, aside from that, you want to use props. props are injected into every other component.
+
+------------------
+    PROPS: You can create a prop anywhere by just setting it to equal and add the value you desire. The example will make a lot more sense
+      EXAMPLE:
+        render(){
+          const myName = "Welcome Jahaziel"
+
+          return(
+            <div>
+              <Header title = {myName} /> //This would render "Welcome Jahaziel"
+            </div>
+          )
+        }
+
+        NOTE: You use dot notation to select where the value is going to be.
+          EXAMPLE:
+          render(){
+            const myName = "Welcome Jahaziel"
+
+            return(
+              <div>
+                <Header title = {myName} />
+                <h2>{this.props.title}</h2> //It would render it here.
+              </div>
+            )
+          }

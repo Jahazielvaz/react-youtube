@@ -1,0 +1,22 @@
+PURPOSE: I don't fully understand exactly what it does, but it looks like it helps manage dependencies and module loading. I'll find out more about it.
+
+SETUP:
+  npm install -S webpack
+  npm install -g webpack
+  npm install -g webpack-cli (Note I had a super hard time getting the cli until i directly installed it globally, so don't skip this step.)
+
+WEBPACK.CONFIG.JS: This is similar as our express config file that we're used to. I don't fully know how to configure it but you can check the sample config in our created file.
+
+WEBPACK COMMAND: run "webpack" on your cli, without the quotations, and this will initialize it, which as usual sets up your webpack environment.
+
+
+SCRIPTS.MIN.JS: After you run it for the first time, make sure you add this file to your output in your webpack config scripts
+
+SELECTING WHICH ENVIRONMENT TO RUN: You can save these environments inside your package.json file
+  EXAMPLE:
+  "scripts": {
+    "wpdev": "webpack --mode development",
+    "wpproduction": "webpack --mode production"
+  },
+
+  FURTHER UNDERSTANDING WEBPACK: From what I was able to tell, with webpack, you can just require modules once, and you don't need to require them in other areas. You can just refference them if you need to, or I think they somehow encompass all the area. You can also minify all your files and modules from what I was able to tell.  
