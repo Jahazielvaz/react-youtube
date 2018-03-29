@@ -10,12 +10,13 @@ export class Layout extends React.Component{
   constructor(){
     super();
     this.state = {
-      text: []
+      text: "I'm crazy"
+
     }
   }
 
   changeText(text){
-    this.setState({text})
+    this.setState({text: })
   }
 
   render(){
@@ -28,7 +29,7 @@ export class Layout extends React.Component{
       <Header question2={"Do you want to know what I really think?"} story2={story2} />
       {/* <Header question3={question3} answer={this.changeAnswer.bind(this)} /> */}
 
-      <BodyTop text={this.changeText.bind(this)}/>
+      <BodyTop text = {this.state.text}/>
 
       <Footer />
     </div>
