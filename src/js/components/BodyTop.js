@@ -1,13 +1,13 @@
 import React from "react";
-import {Layout} from "./Layout";
+import {Header} from "./Header.js";
 
 export class BodyTop extends React.Component{
   render(){
-    this.props.changeText()
+
     return(
       <div className = "bodytop">
         <input placeholder="Type here"/>
-        <h2>{this.props.text}</h2>
+        <h3>{this.props.text}</h3>
       </div>
 
     )

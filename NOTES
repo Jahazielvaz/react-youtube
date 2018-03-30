@@ -100,12 +100,42 @@ STATE VS PROPS: There are 2 main ways in which react handles data. Through state
             return(
               <div>
                 <Header title = {myName} />
-                <h2>{this.props.title}</h2> //It would render it here.
+                <h2>{this.props.myName}</h2> //It would render it here.
               </div>
             )
           }
 
+
 ------------------------------------------------------------------
+COMPONENT LIFE CYCLE METHODS/FUNCTIONS:
+
+  MOUNTING LIFECYCLE FUNCTIONS: These occur when the component is mounted to the DOM.
+
+    1- getInitialState: Set the initial state of the component
+    2- componentWillMount: Any last minute prep before component mounts
+    3- Render: Returns HTML to add to the DOM
+    4-componentDidMount: Fires after a component mounts to the DOM.
+      -Good place to load in external data
+
+  UPDATING LIFECYCLE FUNCTIONS:
+
+    1- componentWillReceiveProps: Called before a component receives, any new props.
+      -Can compare the current and new props, and change the state
+
+    2- shouldComponentUpdate: Can return false if no update wanted
+
+    3- componentWillUpdate:
+
+    4- render:
+
+    5- componentDidUpdate: Operate on the DOM or perform network requests.
+
+
+
+
+
+
+
 EVENTS: This will include BINDING EVENTS, INTERACTING WITH USER INPUTS, AND CHANGING THAT DATA REAL TIME.
 
   EXERCISE 1: We'll allow the user to change the header 3 dynamically.

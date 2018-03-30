@@ -7,19 +7,14 @@ import {BodyTop} from "./BodyTop.js"
 
 
 export class Layout extends React.Component{
-  constructor(){
-    super();
-    this.state = {
-      text: "I'm crazy"
-
-    }
+  constructor(props){
+    super(props);
+    this.state = {text: "text"}
   }
 
-  changeText(text){
-    this.setState({text}) //you can use es6 here, because you're already passing text in.
-  }
 
   render(){
+    this.setState({text: "New Text"})
     const question3 = "What about you makes this world a better place?";
     const story = "I'm a wanderer, one who is thirsty for life!"
     const story2 = "Who cares when our time runs out, if a moment is all we are"
@@ -29,7 +24,7 @@ export class Layout extends React.Component{
       <Header question2={"Do you want to know what I really think?"} story2={story2} />
       {/* <Header question3={question3} answer={this.changeAnswer.bind(this)} /> */}
 
-      <BodyTop changeText = {this.changeText.bind(this)}/>
+      <BodyTop {this.state.text}/>
 
       <Footer />
     </div>
